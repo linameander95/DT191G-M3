@@ -1,0 +1,21 @@
+@model Author
+
+<h1>Books by @Model.Name</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Genre</td>
+            </tr>
+        }
+    </tbody>
+</table>
